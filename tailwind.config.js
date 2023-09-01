@@ -7,8 +7,8 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.stone[100],
-        secondary: colors.blue[800],
-        accent: colors.green[600],
+        secondary: colors.indigo[500],
+        accent: colors.indigo[800],
       },
     },
   },
