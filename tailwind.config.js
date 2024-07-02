@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         primary: colors.stone[100],
         secondary: colors.sky[700],
-        accent: colors.orange[500],
+        accent: colors.orange[900],
       },
     },
   },
