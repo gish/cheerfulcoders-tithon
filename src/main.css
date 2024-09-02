@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  font-family: monospace;
+  line-height: 1.2rem;
+}
+
+.main {
+  max-width: calc(min(80ch, round(down, 100%, 1ch)));;
+  margin: 0 auto;
+}
