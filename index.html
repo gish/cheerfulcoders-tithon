@@ -14,13 +14,30 @@
     <link rel="”mask-icon”" href="./logo.svg" color="#222" />
     <title>Cheerful Coders AB</title>
     <style type="text/css">
+      :root {
+        --color-dark: #282828;
+        --color-light: #fff;
+        --color-accent-light: #aec6d4;
+        --color-accent-dark: #47829f;
+
+        --color-background: var(--color-light);
+        --color-text: var(--color-dark);
+        --color-accent: var(--color-accent-dark);
+      }
+
       body {
+        background-color: var(--color-background);
         font-family: monospace;
         line-height: 1.2rem;
-        color: #222;
+        color: var(--color-text);
+      }
+
+      a {
+        color: var(--color-accent);
       }
 
       .main {
+        max-width: 80ch;
         max-width: calc(min(80ch, round(down, 100%, 1ch)));
         margin: 0 auto;
       }
@@ -32,8 +49,9 @@
       h3 {
         margin-top: 1.8rem;
       }
+
       blockquote {
-        border-left: 2px solid #777;
+        border-left: 2px solid var(--color-accent);
         margin-inline-start: 0;
         padding-left: 1.5rem;
       }
@@ -41,6 +59,15 @@
       #logo {
         max-width: 25%;
         margin: 1rem 0;
+        fill: #f00;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-background: #282828;
+          --color-text: #fff;
+          --color-accent: #aec6d4;
+        }
       }
     </style>
   </head>
