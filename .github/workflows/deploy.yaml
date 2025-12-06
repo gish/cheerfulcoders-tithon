@@ -22,19 +22,3 @@ jobs:
           git_remote_url: ${{ secrets.DOKKU_REPO_URL }}
           ssh_private_key: ${{ secrets.DOKKU_SSH_PRIVATE_KEY }}
 
-      - name: notify deploy finished
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            ${{ github.repository }} deployed
-
-      - name: notify deploy failed
-        uses: appleboy/telegram-action@master
-        if: ${{ failure() }}
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: |
-            ${{ github.repository }} failed deploy
